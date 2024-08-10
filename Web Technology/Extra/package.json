@@ -1,0 +1,11 @@
+{
+  "name": "extra",
+  "version": "1.0.0",
+  "main": "child_process.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
