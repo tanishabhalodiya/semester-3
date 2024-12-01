@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button><input type="text" id="name" placeholder="enter name" /></button><br>
+    <button><input type="text" id="rollno" placeholder="enter rollno" /></button><br>
+    <button id="btn" onclick="add()">Add</button>
+    <div id="display"></div>
+
+    <script>
+        x = 0;
+        index = -1;
+        let Student = [
+            {
+                'Name': 'Ayra',
+                "RollNo": "105"
+            },
+            {
+                "Name": "Marcus",
+                "RollNo": "161"
+            },
+            {
+                "Name": "navya",
+                "RollNo": "165"
+            },
+            {
+                "Name": "Bhavy",
+                "RollNo": "108"
+            },
+        ];
+
+        function dislpay() {
+            temp = "";
+            temp += '<table border="1">';
+            for (let i = 0; i < Student.length; i++) {
+                temp += '<tr>';
+                temp += '<td>' + Student[i].Name + '</td>';
+                temp += '<td>' + Student[i].RollNo + '</td>';
+                temp += '<td><button id="delete" onclick="remove(' + i + ')">Delete</button></td>';
+                temp += '<td><button id="edit" onclick="edit(' + i + ')">Edit</button></td>';
+                temp += '</tr>';
+            }
+            temp += '</table>';
+            document.getElementById('display').innerHTML = temp;
+        }
+        dislpay();
+
+        function add() {
+            
+                let obj = {
+                    Name : document.getElementById('name').value,
+                    RollNo : document.getElementById('rollno').value
+                }
+           
+                document.getElementById('name').value = Student[index].Name
+                document.getElementById('rollno').value = Student[index].RollNo
+                
+                    x = 0;
+                    index = -1;
+                    // document.getElementById("btn").innerHTML = "Add";
+            }
+                Student.push(obj);
+                dislpay();
+
+        
+        function edit(i){
+            document.getElementById("btn").innerHTML = "Edit";
+            x = 1;
+            index=i;
+            add();
+        }
+        function delete(i){
+            Student.splice(i,1);
+            dislpay();
+        }
+
+    </script>
+</body>
+
+</html>

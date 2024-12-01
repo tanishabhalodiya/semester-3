@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse click</title>
+    <style>
+        #result{
+            margin-top: 270px;
+            margin-left: 420px;
+            width: 600px;
+            height: 150px;
+            border-radius: 20px;
+            background-color: green;
+            font-size: large;
+            font-weight: bolder;
+            color: azure;
+            text-align: center;
+            align-content: center;
+            border: 2px solid black;
+        }
+        #body{
+            height: 710px;
+            width: 1470px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="body">
+        <div id="result"></div>
+    </div>
+    
+    <script>
+        //0: left button of mouse
+        //1: middle button og mouse
+        //2: right button of mouse
+        document.getElementById('body').addEventListener('mousedown',(event)=>{
+            if(event.button == 0){
+                document.getElementById('redsult').innerHTML="Left mouse button is clicked"
+            }
+            if(event.button == 2){
+                document.getElementById('redsult').innerHTML="Right mouse button is clicked"
+            }
+        });
+    </script>
+</body>
+</html>

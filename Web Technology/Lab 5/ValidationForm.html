@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Validation Form</h1>
+    <div>
+        <label>User name</label>
+        <input type="text" id="name">
+        <br>
+        <br>
+    </div>
+    <div>
+        <label>Password</label>
+        <input type="text" id="password">
+        <br>
+        <br>
+    </div>
+    <div>
+        <label>Recheck Password </label>
+        <input type="text" id="repeatPassword">
+        <br>
+        <br>
+    </div>
+    <div>
+        <label>Date Of Birth</label>
+        <input type="date" id="age">
+        <br>
+        <br>
+    </div>
+    <div>
+        <label>Enrollment number</label>
+        <input type="text" id="enroll">
+        <br>
+        <br>
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="email" id="email">
+        <br>
+        <br>
+    </div>
+    <div><button onclick="checkValidation()">Submit</button></div>
+
+    <script>
+        function checkValidation(){
+            var uname=document.getElementById("name").value;
+           
+        
+            if(uname.length<8){
+                alert("Invalid user name!!");
+                //document.getElementById("name").value=null
+            }
+
+            var pwd=document.getElementById("password").value;
+            //pattern="(?=.[0-9][@#$&!%])(?=.[/da-zA-Z]{8,12})"
+            pattern="/^(?=.*[a-z])(?=.*/d)(?=.*[@.#$%^&*!^])"
+            regex=new RegExp(pattern);
+                if(!regex.test(pwd)){
+                    alert("Enter valid password")
+                    //document.getElementById("password").value=null
+                }
+            
+    
+            var rpwd=document.getElementById("repeatPassword").value;
+            if(pwd!=rpwd){
+                alert("enter correct password");
+                //document.getElementById("name").value=null           
+            }
+                
+            var dateOfBirth=document.getElementById("age").value;
+            var pattern=
+        }
+    </script>
+</body>
+</html>

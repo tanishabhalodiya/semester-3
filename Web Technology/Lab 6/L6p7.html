@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="textBox">
+        <input type="text" id="name" placeholder="enter name: ">
+        <br>
+        <input type="text" id="rollno" placeholder="enter roll number">
+        <br>
+        <button id="btn" value="Add" onclick="add()">Add</button>
+        
+    </div>
+    <div id="result"></div>
+    <script>
+        let a=[
+            {"name" : "Marcus",
+            "rollno": "119"},
+
+            {"name" : "Arjun",
+            "rollno": "120"},
+            
+            {"name": "Ayra",
+            "rollno": "115"}
+        ]
+        display();
+        function display(){
+            temp+="<table border='2'>"
+            // document.getElementById(display)
+            for(i=0;i<a.length;i++){
+                temp+="<tr>"
+                    temp+="<td>"+a[i].name+"</td>"
+                    temp+="<td>"+a[i].rollno+"</td>"
+                    temp+="<td><button id='btn' value='delete'>delete</button></td>"
+                    temp+="<td><button id='btn' value='edit'>edit</button></td>"
+                temp+="</tr>"
+            }
+            temp+="</table>"
+            document.getElementById("result").innerHTML+=temp;
+        }
+
+        function add(){
+            let obj={
+            name:document.getElementById('name').value,
+            rollno:document.getElementById('rollno').value
+            }
+            a.push(obj)
+            display()
+        }
+        
+        function delete(){
+            a.spl            
+        }
+        
+
+    </script>
+</body>
+</html>

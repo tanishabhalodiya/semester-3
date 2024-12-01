@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        a=parseInt(prompt("Enter number of two digit:"));
+        if(a!=0){
+            y=a%10;
+            x=Math.floor(a/10);
+        }
+        n=1;
+        for(i=1;i<=y;i++){
+            n=n*x;
+        }
+        document.write(x+"^"+y+" = "+n);
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text"></br>
+    <button type="text" id="btn">button</button></br>
+    
+
+   <button id="submit">Submit</button>
+   <button id="reset">reset</button>
+    <script>
+        document.getElementById("btn").addEventListener('focus',()=>{
+            btn.style.backgroundColor="yellow"
+        });
+        document.getElementById("btn").addEventListener('blur',()=>{
+            btn.style.backgroundColor="pink"
+        });
+        document.getElementById("text").addEventListener('change',()=>{
+            console.log("onchange is called");
+        });
+        document.getElementById("text").addEventListener('reset',()=>{
+            console.log("reset is called");
+        });
+        document.getElementById("text").addEventListener('select',()=>{
+            console.log("select is called");
+        });
+        document.getElementById("btn").addEventListener('submit',()=>{
+            console.log("submit is called");
+        });
+    </script>
+</body>
+</html>

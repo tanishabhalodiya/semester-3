@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        array =["I am the student of compurer engineering.",
+                "Here we do JavaScript programme.",
+                "JavaScript is scripting language.",
+                "Java is programming language."
+        ]
+        let indexOfWord=-1;
+        let indexOfsentence=-1;
+        findWord="student"
+
+        for(let i=0;i<array.length; i++){
+            let words=array[i].split()
+
+            for(let j=0;j<words.length;j++){
+                if(words[j]==findWord){
+                    indexOfWord=j
+                    indexOfsentence=i
+                }
+            }
+        }
+        if(indexOfWord==(-1)){
+            document.write("word not found.")
+        }
+        else{
+            document.write("the index of sentence is:"+indexOfsentence+" and word found on : "+indexOfWord+"index.")
+        }
+    </script>
+</body>
+</html>

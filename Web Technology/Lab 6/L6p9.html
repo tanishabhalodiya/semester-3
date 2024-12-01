@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text">
+   
+    <script>
+        var ch=document.getElementById("text").value;
+        document.getElementById("text").addEventListener('keypress',()=>{
+            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+            console.log("vowel is pressed");
+            // document.getElementById("text").value="";
+        }
+        });
+        document.getElementById("text").addEventListener('keyup',()=>{
+            console.log("key up event");
+            document.body.style.backgroundColor="blue"
+            // document.getElementById("text").value="";
+        });
+        document.getElementById("text").addEventListener('keydown',()=>{
+            console.log("key down");
+            document.body.style.backgroundColor="white"
+            // document.getElementById("text").value="";
+        
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime numbers</title>
+</head>
+<body>
+    <script>
+        a=parseInt(prompt("Enter number a:"));
+        b=parseInt(prompt("Enter number b: "));
+        document.write("Prime numbers between a and b:");
+        document.write("<br>");
+        
+        for(i=a;i<=b;i++){
+            temp=0;
+            for(j=2;j<i;j++){
+                if(i%j==0){
+                  break;
+                }
+                else{
+                    temp=1;
+                }
+              
+            }
+            if(temp==1){
+                document.write(i);
+                document.write("<br/>");
+            }
+        }
+    </script>
+</body>
+</html>

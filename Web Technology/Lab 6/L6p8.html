@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head" style="">Heading</h1>
+    <button id="green">Green</button>
+    <button id="red">Red</button>
+    <button id="time">FindTime</button>
+   
+    <script>
+        document.getElementById("head").addEventListener('mouseover',()=>{
+            document.body.style.color="yellow";
+        });
+         document.getElementById("time").addEventListener('click',()=>{
+            console.log(Date());
+        });
+        document.getElementById("head").addEventListener('mouseout',()=>{
+            document.body.style.color="black";
+        });
+        document.getElementById("red").addEventListener('click',()=>{
+            document.body.style.backgroundColor="red"
+        });
+        document.getElementById("green").addEventListener('click',()=>{
+            document.body.style.backgroundColor="green"
+        });
+   
+    </script>
+</body>
+</html>
